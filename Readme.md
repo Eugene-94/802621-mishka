@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Евгений Кайгородов](https://up.htmlacademy.ru/adaptive/15/user/802621).
-* Наставник: `Неизвестно`.
+* Наставник: [Андрей Островский](https://up.htmlacademy.ru/htmlcss/22/user/198062).
 
 ---
 
