@@ -12,30 +12,25 @@
         </a>
       </div>
 
-      <section class="user-menu">
-        <nav class="page-nav">
-          <ul class="page-nav__list">
-            <li class="page-nav__item">
-              <a class="page-nav__link" href="#">Каталог товаров</a>
-            </li>
-            <li class="page-nav__item">
-              <a class="page-nav__link" href="#">Вязание на заказ</a>
-            </li>
-          </ul>
-        </nav>
-
-        <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
-          <label class="search-form__label visually-hidden" for="search">Поиск по сайту</label>
-          <input class="search-form__input" id="search" type="search">
-          <button class="search-form__btn" type="submit">Найти</button>
-        </form>
-
-        <a class="cart" href="#">Корзина:
-          <span class="cart__goods">пока пуста</span>
-        </a>
-
+      <nav class="page-nav">
+        <ul class="page-nav__list">
+          <li class="page-nav__item">
+            <a class="page-nav__link" href="#">Каталог товаров</a>
+          </li>
+          <li class="page-nav__item">
+            <a class="page-nav__link" href="#">Вязание на заказ</a>
+          </li>
+          <li class="page-nav__item">
+            <a class="page-nav__link" href="#">Поиск по сайту</a>
+          </li>
+          <li class="page-nav__item">
+            <a class="cart" href="#">Корзина:
+              <span class="cart__goods">пока пуста</span>
+            </a>
+          </li>
+        </ul>
         <button class="user-menu__close" type="button">Закрыть меню</button>
-      </section>
+      </nav>
     </header>
 
     <main class="page-content">
@@ -51,8 +46,8 @@
       </ul>
 
       <section class="week-item">
-        <h2 class="week-item__title">Товар недели</h2>
-        <h3 class="week-item__item-title">Вязаные корзинки</h3>
+        <h2 class="week-item__title">Вязаные корзинки</h2>
+        <span class="week-item__subtitle">Товар недели</span>
         <p class="week-item__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
 
         <table class="week-item__properties">
@@ -93,10 +88,13 @@
 
       <section class="feedback">
         <h2 class="feedback__title">Отзывы</h2>
-        <p class="feedback__message">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии,
-          я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
-        <p class="feedback__author">Анастасия Красильникова</p>
-        <p class="feedback__account">@misssssiskras</p>
+
+        <article class="feedback__slide">
+          <p class="feedback__message">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии,
+            я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+          <h3 class="feedback__author">Анастасия Красильникова</h3>
+          <p class="feedback__account">@misssssiskras</p>
+        </article>
 
         <button class="feedback__selector feedback__selector--previous" type="button">Предыдущий отзыв</button>
         <button class="feedback__selector feedback__selector--next" type="button">Следующий отзыв</button>
@@ -108,9 +106,9 @@
         <h2 class="contacts__title">Контакты</h2>
 
         <p class="contacts__email">e-mail:
-          <a class="conacts__link" href="#">info@mimimishkashop.ru</a>
+          <a class="conacts__link" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
         </p>
-        <p class="contacts__adress">адрес: г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</p>
+        <p class="contacts__address">адрес: г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</p>
 
         <div class="contacts__map">
           <img src="#" alt="Мы на карте">
@@ -143,13 +141,21 @@
 
     <section class="modal">
       <h2 class="modal__title">Добавить в корзину</h2>
-      <p class="modal__choose-size">Выберите размер:</p>
 
-      <button class="modal__button modal__button--s" type="button">S</button>
-      <button class="modal__button modal__button--m" type="button">M</button>
-      <button class="modal__button modal__button--l" type="button">L</button>
+      <form class="modal__form" action="https://echo.htmlacademy.ru" method="post">
+        <legend class="modal__form-title">Выберите размер:</legend>
 
-      <a class="modal__link" href="#">Добавить</a>
+        <input class="modal__input" id="size-s" type="checkbox" name="size" value="s">
+        <label class="modal__label" for="size-s">S</label>
+
+        <input class="modal__input" id="size-m" type="checkbox" name="size" value="m">
+        <label class="modal__label" for="size-m">M</label>
+
+        <input class="modal__input" id="size-l" type="checkbox" name="size" value="l">
+        <label class="modal__label" for="size-l">L</label>
+
+        <button class="modal__btn" type="submit">Добавить</button>
+      </form>
     </section>
   </body>
 </html>

@@ -42,8 +42,7 @@
       <h1 class="page-title">Каталог товаров</h1>
       <section class="goods">
         <h2 class="visually-hidden">Список товаров</h2>
-        <ul class="goods-list">
-          <li class="goods-list__item">
+          <article class="goods__card">
             <a class="goods-list__link" href="#">
               <img src="#" alt="Зайчик-попрыгайчик" width="" height="">
               <h3 class="goods-list__title">Зайчик-попрыгайчик</h3>
@@ -53,8 +52,8 @@
             <p class="goods-list__price">1200 руб.</p>
 
             <a class="goods-list__to-cart" href="#">В корзину</a>
-          </li>
-          <li class="goods-list__item">
+          </article>
+          <article class="goods__card">
             <a class="goods-list__link" href="#">
               <img src="#" alt="Корзинка для белья" width="" height="">
               <h3 class="goods-list__title">Корзинка для белья</h3>
@@ -64,8 +63,8 @@
             <p class="goods-list__price">690 руб.</p>
 
             <a class="goods-list__to-cart" href="#">В корзину</a>
-          </li>
-          <li class="goods-list__item">
+          </article>
+          <article class="goods__card">
             <a class="goods-list__link" href="#">
               <img src="#" alt="Большая корзинка для игрушек" width="" height="">
               <h3 class="goods-list__title">Большая корзинка для игрушек</h3>
@@ -75,8 +74,7 @@
             <p class="goods-list__price">1500 руб.</p>
 
             <a class="goods-list__to-cart" href="#">В корзину</a>
-          </li>
-        </ul>
+          </article>
       </section>
 
       <section class="production">
@@ -112,13 +110,21 @@
 
     <section class="modal">
       <h2 class="modal__title">Добавить в корзину</h2>
-      <p class="modal__choose-size">Выберите размер:</p>
 
-      <button class="modal__button modal__button--s" type="button">S</button>
-      <button class="modal__button modal__button--m" type="button">M</button>
-      <button class="modal__button modal__button--l" type="button">L</button>
+      <form class="modal__form" action="https://echo.htmlacademy.ru" method="post">
+        <legend class="modal__form-title">Выберите размер:</legend>
 
-      <a class="modal__link" href="#">Добавить</a>
+        <input class="modal__input" id="size-s" type="checkbox" name="size" value="s">
+        <label class="modal__label" for="size-s">S</label>
+
+        <input class="modal__input" id="size-m" type="checkbox" name="size" value="m">
+        <label class="modal__label" for="size-m">M</label>
+
+        <input class="modal__input" id="size-l" type="checkbox" name="size" value="l">
+        <label class="modal__label" for="size-l">L</label>
+
+        <button class="modal__btn" type="submit">Добавить</button>
+      </form>
     </section>
   </body>
 </html>
