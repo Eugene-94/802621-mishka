@@ -1,0 +1,20 @@
+@mixin link-btn {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  padding: 15px 85px;
+  border: 2px solid #444444;
+
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+@mixin center {
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+}

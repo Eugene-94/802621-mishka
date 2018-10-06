@@ -3,72 +3,90 @@
   <head>
     <meta charset="utf-8">
     <title>Мишка Форма заказа</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
       <div class="page-logo">
         <a class="page-logo__link" href="index.html">
-          <img src="#" alt="Мишка" width="" height="">
+          <img src="img/logo-mobile.svg" alt="Мишка" width="86" height="35">
         </a>
       </div>
 
-      <section class="user-menu">
-        <nav class="page-nav">
-          <ul class="page-nav__list">
-            <li class="page-nav__item">
-              <a class="page-nav__link" href="#">Каталог товаров</a>
-            </li>
-            <li class="page-nav__item">
-              <a class="page-nav__link" href="#">Вязание на заказ</a>
-            </li>
-          </ul>
-        </nav>
-
-        <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
-          <label class="search-form__label visually-hidden" for="search">Поиск по сайту</label>
-          <input class="search-form__input" id="search" type="search">
-          <button class="search-form__btn" type="submit">Найти</button>
-        </form>
-
-        <a class="cart" href="#">Корзина:
-          <span class="cart__goods">пока пуста</span>
-        </a>
-
-        <button class="user-menu__close" type="button">Закрыть меню</button>
-      </section>
+      <nav class="page-nav">
+        <ul class="page-nav__list list">
+          <li class="page-nav__item">
+            <a class="page-nav__link link" href="#">Каталог товаров</a>
+          </li>
+          <li class="page-nav__item">
+            <a class="page-nav__link link" href="#">Вязание на заказ</a>
+          </li>
+          <li class="page-nav__item">
+            <a class="page-nav__link link" href="#">Поиск по сайту</a>
+          </li>
+          <li class="page-nav__item">
+            <a class="cart link page-nav__link" href="#">Корзина:
+              <span class="cart__goods">пока пуста</span>
+            </a>
+          </li>
+        </ul>
+        <button class="page-nav__btn page-nav__btn--close btn" type="button">
+          <span class="visually-hidden">Закрыть меню</span>
+        </button>
+      </nav>
     </header>
 
-    <main class="page-content">
+    <main class="form-content">
+      <h1 class="inner-title title">Вязание на заказ</h1>
+      <p class="intro">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
       <form class="order-form" action="https://echo.htmlacademy.ru" method="post">
         <fieldset class="order-form__section">
           <legend class="order-form__section-title">Тип</legend>
 
-          <input class="order-form__radio" id="accessory" type="radio" name="item-type" value="accessory" checked>
-          <label class="order-form__input-label" for="accessory">Аксессуар для интерьера</label>
+          <label class="order-form__input-label" for="accessory">
+            <input class="order-form__radio" id="accessory" type="radio" name="item-type" value="accessory" checked>
+            Аксессуар для интерьера
+          </label>
 
-          <input class="order-form__radio" id="toy" type="radio" name="item-type" value="toy">
-          <label class="order-form__input-label" for="toy">Детская игрушка</label>
+          <label class="order-form__input-label" for="toy">
+            <input class="order-form__radio" id="toy" type="radio" name="item-type" value="toy">
+            Детская игрушка
+          </label>
         </fieldset>
         <fieldset class="order-form__section">
           <legend class="order-form__section-title">Цвет</legend>
 
-          <input class="order-form__checkbox" id="white" type="checkbox" name="color" value="white" checked>
-          <label class="order-form__input-label" for="white">Белый</label>
+          <label class="order-form__input-label" for="white">
+            <input class="order-form__checkbox" id="white" type="checkbox" name="color" value="white" checked>
+            Белый
+          </label>
 
-          <input class="order-form__checkbox" id="gray" type="checkbox" name="color" value="gray" checked>
-          <label class="order-form__input-label" for="gray">Серый</label>
+          <label class="order-form__input-label" for="gray">
+            <input class="order-form__checkbox" id="gray" type="checkbox" name="color" value="gray" checked>
+            Серый
+          </label>
 
-          <input class="order-form__checkbox" id="tiffany" type="checkbox" name="color" value="tiffany">
-          <label class="order-form__input-label" for="tiffany">	&laquo;Тиффани	&raquo;</label>
+          <label class="order-form__input-label" for="tiffany">
+            <input class="order-form__checkbox" id="tiffany" type="checkbox" name="color" value="tiffany">
+          	&laquo;Тиффани&raquo;
+          </label>
 
-          <input class="order-form__checkbox" id="black" type="checkbox" name="color" value="black">
-          <label class="order-form__input-label" for="black">Черный</label>
+          <label class="order-form__input-label" for="black">
+            <input class="order-form__checkbox" id="black" type="checkbox" name="color" value="black">
+            Черный
+          </label>
 
-          <input class="order-form__checkbox" id="pink" type="checkbox" name="color" value="pink">
-          <label class="order-form__input-label" for="pink">Розовый</label>
+          <label class="order-form__input-label" for="pink">
+            <input class="order-form__checkbox" id="pink" type="checkbox" name="color" value="pink">
+            Розовый
+          </label>
 
-          <input class="order-form__checkbox" id="orange" type="checkbox" name="color" value="orange">
-          <label class="order-form__input-label" for="orange">Оранжевый</label>
+          <label class="order-form__input-label" for="orange">
+            <input class="order-form__checkbox" id="orange" type="checkbox" name="color" value="orange">
+            Оранжевый
+          </label>
         </fieldset>
         <fieldset class="order-form__section">
           <legend class="order-form__section-title">ФИО</legend>
@@ -82,13 +100,19 @@
           <label class="order-form__input-label" for="patronymic">Отчество:</label>
           <input class="order-form__input" id="patronymic" type="text" placeholder="Отчество, если желаете">
 
-          <label class="order-form__input-label" for="phone">ТЕЛ</label>
+          <legend class="order-form__section-title">
+            <label class="order-form__input-label" for="phone">ТЕЛ</label>
+          </legend>
           <input class="order-form__input" id="phone" type="phone" placeholder="+7 XXX XXX XX XX*" required>
 
-          <label class="order-form__input-label" for="phone">E-MAIL</label>
+          <legend class="order-form__section-title">
+            <label class="order-form__input-label" for="phone">E-MAIL</label>
+          </legend>
           <input class="order-form__input" id="phone" type="email" placeholder="Ваш E-mail*" required>
 
-          <label class="order-form__input-label" for="message">ДОП</label>
+          <legend class="order-form__section-title">
+            <label class="order-form__input-label" for="message">ДОП</label>
+          </legend>
           <textarea class="order-form__textarea" rows="8" cols="80">Опишите все ваши пожелания к заказу</textarea>
         </fieldset>
         <p class="order-form__explanation">*Поля обязательны для заполнения</p>
@@ -97,22 +121,28 @@
     </main>
 
     <footer class="page-footer">
-      <ul class="social">
+      <ul class="social list">
         <li class="social__item">
-          <a class="social__link" href="#">Мы в инстаграме</a>
+          <a class="social__link social__link--inst link" href="#">
+            <span class="visually-hidden">Мы в инстаграме</span>
+          </a>
         </li>
         <li class="social__item">
-          <a class="social__link" href="#">Мы в фейсбуке</a>
+          <a class="social__link social__link--fb link" href="#">
+            <span class="visually-hidden">Мы в фейсбуке</span>
+          </a>
         </li>
         <li class="social__item">
-          <a class="social__link" href="#">Мы в твиттере</a>
+          <a class="social__link social__link--tw link" href="#">
+            <span class="visually-hidden">Мы в твиттере</span>
+          </a>
         </li>
       </ul>
 
       <div class="copyright">
         <span class="copyright__developed">Разработано</span>
-        <a href="#" class="copyright__link">
-          <img src="#" alt="HTML Academy">
+        <a href="#" class="copyright__link link">
+          <img src="img/logo-htmlacademy.svg" alt="HTML Academy" width="27" height="34">
         </a>
       </div>
     </footer>

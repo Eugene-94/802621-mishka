@@ -1,0 +1,40 @@
+.feedback {
+  padding: 0 30px;
+  padding-bottom: 50px;
+}
+
+.feedback__selector {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 49%;
+  border: 1px solid #ececec;
+  padding: 15px 0;
+
+  background-color: transparent;
+}
+
+.feedback__write-review {
+  @include link-btn;
+  padding: 15px 0;
+  margin-top: 40px;
+
+  text-align: center;
+}
+
+@media (min-width: 321px) {
+  .feedback__title {
+    text-align: center;
+  }
+
+  .feedback__message {
+    text-align: center;
+  }
+
+  .feedback__author {
+    text-align: center;
+  }
+
+  .feedback__account {
+    text-align: center;
+  }
+}
