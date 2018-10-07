@@ -18,12 +18,23 @@
 
 body {
   font-family: "OpenSans", "Arial", sans-serif;
-  font-size: 15px;
+  font-size: $basic-font-size;
   font-weight: 300;
   line-height: 30px;
-  color: #444444;
+  color: $basic-text-color;
 
-  background-color: $bg-color;
+  background-color: $main-bg-color;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+
+  list-style: none;
 }
 
 .visually-hidden {
@@ -33,29 +44,4 @@ body {
   height: 1px;
   margin: -1px;
   overflow: hidden;
-}
-
-.link {
-  color: inherit;
-  text-decoration: none;
-}
-
-.list {
-  padding: 0;
-
-  list-style: none;
-}
-
-.title {
-  font-family: "OpenSans", "Arial", sans-serif;
-  font-size: 25px;
-  font-weight: 700;
-  line-height: 30px;
-  color: #000000;
-}
-
-.btn {
-  border: none;
-
-  background-color: transparent;
 }

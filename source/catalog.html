@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <title>Мишка Каталог</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -16,34 +15,34 @@
       </div>
 
       <nav class="page-nav">
-        <ul class="page-nav__list list">
+        <ul class="page-nav__list">
           <li class="page-nav__item">
-            <a class="page-nav__link link" href="#">Каталог товаров</a>
+            <a class="page-nav__link">Каталог товаров</a>
           </li>
           <li class="page-nav__item">
-            <a class="page-nav__link link" href="#">Вязание на заказ</a>
+            <a class="page-nav__link" href="form.html">Вязание на заказ</a>
           </li>
           <li class="page-nav__item">
-            <a class="page-nav__link link" href="#">Поиск по сайту</a>
+            <a class="page-nav__link" href="#">Поиск по сайту</a>
           </li>
           <li class="page-nav__item">
-            <a class="cart link page-nav__link" href="#">Корзина:
+            <a class="cart page-nav__link" href="#">Корзина:
               <span class="cart__goods">пока пуста</span>
             </a>
           </li>
         </ul>
-        <button class="page-nav__btn page-nav__btn--close btn" type="button">
+        <button class="page-nav__btn page-nav__btn--close" type="button">
           <span class="visually-hidden">Закрыть меню</span>
         </button>
       </nav>
     </header>
 
     <main class="catalog-content">
-      <h1 class="inner-title title">Каталог товаров</h1>
+      <h1 class="page-title page-title--inner">Каталог товаров</h1>
       <section class="goods">
         <h2 class="visually-hidden">Список товаров</h2>
           <article class="goods-card">
-            <a class="goods-card__link link" href="#">
+            <a class="goods-card__link" href="#">
               <img src="img/photo-hare-mobile@1x.jpg" alt="Зайчик-попрыгайчик" width="260" height="195">
               <h3 class="goods-card__title">Зайчик-попрыгайчик</h3>
             </a>
@@ -58,7 +57,7 @@
             </div>
           </article>
           <article class="goods-card">
-            <a class="goods-card__link link" href="#">
+            <a class="goods-card__link" href="#">
               <img src="img/photo-bowl-mobile@1x.jpg" alt="Корзинка для белья" width="260" height="195">
               <h3 class="goods-card__title">Корзинка для белья</h3>
             </a>
@@ -73,7 +72,7 @@
             </div>
           </article>
           <article class="goods-card">
-            <a class="goods-card__link link" href="#">
+            <a class="goods-card__link" href="#">
               <img src="img/photo-toys-mobile@1x.jpg" alt="Большая корзинка для игрушек" width="260" height="195">
               <h3 class="goods-card__title">Большая корзинка для игрушек</h3>
             </a>
@@ -89,31 +88,38 @@
           </article>
       </section>
 
-      <section class="production">
-        <h2 class="production__title title">Процесс производства</h2>
+      <section class="production catalog-content__production">
+        <h2 class="production__title">
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
+            <g transform="translate(0 192)">
+            <path d="M26-177l6-4v16l-6-4V-177z M24-177v8c0,2.209-1.791,4-4,4H4c-2.209,0-4-1.791-4-4v-8c0-2.209,1.791-4,4-4h10 c0-1.105,0.895-2,2-2v-2H5c-0.553,0-1-0.447-1-1s0.447-1,1-1h12c0.553,0,1,0.447,1,1v3c1.105,0,2,0.895,2,2 C22.209-181,24-179.209,24-177z M12-177H4v8h8V-177z M20-176c0-0.553-0.447-1-1-1h-4c-0.553,0-1,0.447-1,1s0.447,1,1,1h4 C19.553-175,20-175.447,20-176z"/>
+            </g>
+          </svg>
+          Процесс производства
+        </h2>
         <div class="production__video">
           <img src="img/video-mobile@1x.jpg" alt="Видео" class="production__video-preview" width="260" height="150">
         </div>
         <p class="production__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том,
           как появляются наши товары.</p>
-        <a href="#" class="production__link link">Сделать заказ</a>
+        <a href="#" class="production__link">Сделать заказ</a>
       </section>
     </main>
 
     <footer class="page-footer">
-      <ul class="social list">
+      <ul class="social">
         <li class="social__item">
-          <a class="social__link social__link--inst link" href="#">
+          <a class="social__link social__link--inst" href="#">
             <span class="visually-hidden">Мы в инстаграме</span>
           </a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--fb link" href="#">
+          <a class="social__link social__link--fb" href="#">
             <span class="visually-hidden">Мы в фейсбуке</span>
           </a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--tw link" href="#">
+          <a class="social__link social__link--tw" href="#">
             <span class="visually-hidden">Мы в твиттере</span>
           </a>
         </li>
@@ -121,7 +127,7 @@
 
       <div class="copyright">
         <span class="copyright__developed">Разработано</span>
-        <a href="#" class="copyright__link link">
+        <a href="#" class="copyright__link">
           <img src="img/logo-htmlacademy.svg" alt="HTML Academy" width="27" height="34">
         </a>
       </div>

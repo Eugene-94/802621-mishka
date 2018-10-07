@@ -25,6 +25,8 @@
   min-width: 21px;
   min-height: 20px;
 
+  @include btn-common;
+
   &.page-nav__btn--close {
     background-image: url("../img/icon-menu-close.svg");
   }

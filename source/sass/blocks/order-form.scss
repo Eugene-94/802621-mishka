@@ -16,7 +16,7 @@
   font-size: 17px;
   line-height: 16px;
   font-weight: 700;
-  color: $form-title;
+  color: $form-title-color;
   text-transform: uppercase;
 }
 
@@ -26,6 +26,11 @@
   font-size: 17px;
   line-height: 18px;
   font-weight: 700;
+
+  &--colorful {
+    color: $form-title-color;
+    text-transform: uppercase;
+  }
 }
 
 .order-form__input {
@@ -47,6 +52,6 @@
 
 .order-form__btn {
   @include link-btn;
-  background-color: $bg-color;
+  background-color: $main-bg-color;
   padding: 15px 0;
 }

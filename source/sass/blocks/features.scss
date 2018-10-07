@@ -2,16 +2,14 @@
   padding: 0 30px;
 }
 
+.features__title {
+  @include title-common;
+}
+
 .features__item {
   padding-top: 60px;
 
   font-size: 17px;
   font-weight: 700;
   line-height: 20px;
-}
-
-@media (min-width: 321px) {
-  .features {
-    text-align: center;
-  }
 }

@@ -3,11 +3,15 @@
   padding-bottom: 35px;
 }
 
+.week-item__title {
+  @include title-common;
+}
+
 .week-item__subtitle {
   font-weight: 700;
   font-size: 17px;
   line-height: 20px;
-  color: $week-item;
+  color: #63d1bb;
 }
 
 .week-item__description {
@@ -45,22 +49,4 @@
   @include link-btn;
   padding: 15px 0;
   text-align: center;
-}
-
-@media (min-width: 321px) {
-  .week-item__title {
-    text-align: center;
-  }
-
-  .week-item__subtitle {
-    text-align: center;
-  }
-
-  .week-item__description {
-    text-align: center;
-  }
-
-  .week-item__data {
-    text-align: center;
-  }
 }

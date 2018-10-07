@@ -5,6 +5,7 @@
 
 .contacts__title {
   padding: 0 30px;
+  @include title-common;
 }
 
 .contacts__info {
@@ -26,14 +27,4 @@
 
 .contacts__map {
   text-align: center;
-}
-
-@media (min-width: 321px) {
-
-  .contacts__title {
-    text-align: center;
-  }
-  .contacts__data {
-    text-align: center;
-  }
 }
