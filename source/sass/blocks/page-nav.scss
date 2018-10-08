@@ -2,6 +2,10 @@
   position: relative;
 }
 
+.page-nav__list {
+  @include list-common;
+}
+
 .page-nav__item {
   text-align: center;
 }

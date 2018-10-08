@@ -1,3 +1,7 @@
+.categories {
+  @include list-common;
+}
+
 .categories__item {
   text-align: center;
 }
@@ -13,13 +17,13 @@
   font-size: 19px;
   font-weight: 700;
   line-height: 24px;
-  color: $categories-text-color;
+  color: #ffffff;
 
   &--interior {
-    background-color: $categories-interior-color;
+    background-color: #63d1bb;
   }
 
   &--toys {
-    background-color: $categories-toys-color;
+    background-color: #56c3b2;
   }
 }

@@ -6,6 +6,10 @@
   @include title-common;
 }
 
+.features__list {
+  @include list-common;
+}
+
 .features__item {
   padding-top: 60px;
 

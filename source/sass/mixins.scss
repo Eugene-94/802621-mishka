@@ -32,3 +32,14 @@
   line-height: 30px;
   color: #000000;
 }
+
+@mixin list-common {
+  padding: 0;
+
+  list-style: none;
+}
+
+@mixin colorful-label {
+  color: $form-title-color;
+  text-transform: uppercase;
+}
