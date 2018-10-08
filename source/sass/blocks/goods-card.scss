@@ -1,0 +1,54 @@
+.goods-card {
+  border: 1px solid #ededed;
+  margin-bottom: 30px;
+}
+
+.goods-card__title {
+  padding: 0 28px;
+  font-size: 17px;
+  line-height: 24px;
+  color: #000000;
+}
+
+.goods-card__description {
+  padding: 0 28px;
+
+  font-size: 13px;
+  line-height: 30px;
+}
+
+.goods-card__price {
+  padding: 0 28px;
+
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.goods-card__to-cart {
+  position: relative;
+
+  display: block;
+  width: 20px;
+  height: 19px;
+  margin-left: 110px;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 20px;
+    height: 19px;
+
+    background-image: url("../img/icon-cart.svg");
+  }
+}
+
+.goods-card__buy-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}

@@ -1,0 +1,30 @@
+.contacts {
+  padding-top: 35px;
+  padding-bottom: 40px;
+}
+
+.contacts__title {
+  @include title-common;
+  padding: 0 30px;
+}
+
+.contacts__info {
+  width: 81.25%;
+  margin: 0 auto;
+}
+
+.contacts__data {
+  width: 50%;
+}
+
+.contacts__write-us {
+  @include link-btn;
+
+  padding: 15px 0;
+  margin: 0 auto;
+  width: 81.25%;
+}
+
+.contacts__map {
+  text-align: center;
+}

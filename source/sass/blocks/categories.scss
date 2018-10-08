@@ -1,0 +1,29 @@
+.categories {
+  @include list-common;
+}
+
+.categories__item {
+  text-align: center;
+}
+
+.categories__link {
+  box-sizing: border-box;
+
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 25px 30px;
+
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #ffffff;
+
+  &--interior {
+    background-color: #63d1bb;
+  }
+
+  &--toys {
+    background-color: #56c3b2;
+  }
+}

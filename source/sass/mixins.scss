@@ -1,0 +1,45 @@
+@mixin link-btn {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  padding: 15px 85px;
+  border: 2px solid #444444;
+
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+@mixin to-center {
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+@mixin btn-common {
+  border: none;
+
+  background-color: transparent;
+}
+
+@mixin title-common {
+  font-family: "OpenSans", "Arial", sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 30px;
+  color: #000000;
+}
+
+@mixin list-common {
+  padding: 0;
+
+  list-style: none;
+}
+
+@mixin colorful-label {
+  color: $form-title-color;
+  text-transform: uppercase;
+}

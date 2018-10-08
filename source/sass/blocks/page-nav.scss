@@ -1,0 +1,41 @@
+.page-nav {
+  position: relative;
+}
+
+.page-nav__list {
+  @include list-common;
+}
+
+.page-nav__item {
+  text-align: center;
+}
+
+.page-nav__link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding-top: 25px;
+  padding-bottom: 25px;
+
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.page-nav__btn {
+  position: absolute;
+  top: -50px;
+  right: 30px;
+
+  min-width: 21px;
+  min-height: 20px;
+
+  @include btn-common;
+
+  &.page-nav__btn--close {
+    background-image: url("../img/icon-menu-close.svg");
+  }
+
+  &.page-nav__btn--open {
+    background-image: url("../img/icon-menu-open.svg");
+  }
+}
