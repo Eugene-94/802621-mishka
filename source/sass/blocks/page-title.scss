@@ -19,3 +19,35 @@
     background-color: $title-bg;
   }
 }
+
+@media (min-width: $tablet-width) {
+  .page-title {
+    margin: 0;
+
+    @include title-tablet-common;
+
+    &--index {
+      padding: 125px 50px;
+      padding-bottom: 420px;
+
+      background-image: url("../img/hero-desktop@1x.jpg");
+      background-repeat: no-repeat;
+      background-position: center 10%;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-title {
+    @include title-desktop-common;
+
+    &--index {
+      padding: 125px 50px;
+      padding-bottom: 420px;
+
+      background-image: url("../img/hero-tablet@1x.jpg");
+      background-repeat: no-repeat;
+      background-position: center 10%;
+    }
+  }
+}

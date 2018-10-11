@@ -1,5 +1,23 @@
 .page-logo {
   padding-top: 20px;
+  order: 0;
+  align-items: center;
 
   text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+  .page-logo {
+    width: 47.9042%;
+    display: flex;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-logo {
+    width: 30.57%;
+    order: 1;
+    display: flex;
+    justify-content: center;
+  }
 }

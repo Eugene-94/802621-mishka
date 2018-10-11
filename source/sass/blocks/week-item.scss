@@ -50,3 +50,102 @@
   padding: 15px 0;
   text-align: center;
 }
+
+@media (min-width: $tablet-width) {
+  .week-item {
+    /*display: flex;
+    flex-wrap: wrap;*/
+    padding: 0 50px;
+    outline: 1px solid black;
+  }
+
+  .week-item__title-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .week-item__title {
+    @include title-tablet-common;
+  }
+
+  .week-item__info-wrapper {
+    display: inline-block;
+    width: 49%;
+    margin-bottom: 10px;
+  }
+
+  .week-item__description {
+    margin-bottom: 45px;
+  }
+
+  .week-item__buy-wrapper {
+    width: 50%;
+  }
+
+  .week-item__image {
+    width: 50%;
+    float: right;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .week-item {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .week-item__title {
+    @include title-desktop-common;
+    word-wrap: normal;
+    overflow: visible;
+  }
+
+  .week-item__subtitle {
+    width: 175px;
+  }
+
+  .week-item__title-wrapper {
+    width: auto;
+    flex-direction: row-reverse;
+    overflow: visible;
+  }
+
+  .week-item__image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -10;
+
+    width: 50%;
+  }
+
+  .week-item__info-wrapper {
+    order: 2;
+    margin-left: 175px;
+    width: 33.33%;
+  }
+
+  .week-item__buy-wrapper {
+    order: 3;
+    margin-left: 175px;
+    width: 33.33%;
+  }
+
+  .week-item__description {
+    margin-bottom: 65px;
+  }
+
+  .week-item__properties {
+    margin-bottom: 80px;
+  }
+
+  .week-item__price {
+    margin-bottom: 60px;
+  }
+}

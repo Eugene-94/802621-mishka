@@ -27,3 +27,14 @@
     background-color: #56c3b2;
   }
 }
+
+@media (min-width: $tablet-width) {
+  .categories {
+    padding: 0 50px;
+    display: flex;
+  }
+
+  .categories__item {
+    width: 50%;
+  }
+}

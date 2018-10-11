@@ -24,3 +24,57 @@
 
   text-align: center;
 }
+
+@media (min-width: $tablet-width) {
+  .feedback {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    padding: 0;
+    padding-right: 50px;
+  }
+
+  .feedback__slide {
+    width: 100%;
+    order: 2;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 50px;
+  }
+
+  .feedback__message {
+    width: 100%;
+  }
+
+  .author-wrapper {
+    flex-grow: 1;
+  }
+
+  .feedback__selector {
+    width: 83.5px;
+  }
+
+  .feedback__title {
+    order: 0;
+    flex-grow: 1;
+    padding-left: 50px;
+
+    @include title-tablet-common;
+  }
+
+  .feedback__write-review {
+    width: 170px;
+    order: 1;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .feedback__title {
+    @include title-desktop-common;
+    padding-left: 225px;
+  }
+
+  .feedback__slide {
+    padding-left: 225px;
+  }
+}

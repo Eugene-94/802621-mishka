@@ -3,3 +3,13 @@
 
   background-color: $footer-bg;
 }
+
+@media (min-width: $tablet-width) {
+  .page-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 20px 50px;
+  }
+}

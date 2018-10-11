@@ -52,3 +52,16 @@
   justify-content: flex-start;
   align-items: center;
 }
+
+@media (min-width: $tablet-width) {
+  .goods-card {
+    display: flex;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .goods-card {
+    display: flex;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,48 @@
+.page-header__btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+
+  min-width: 21px;
+  min-height: 20px;
+
+  @include btn-common;
+
+  &.main-nav__btn--close {
+    background-image: url("../img/icon-menu-close.svg");
+  }
+
+  &.main-nav__btn--open {
+    background-image: url("../img/icon-menu-open.svg");
+  }
+}
+
+.page-header__delivery {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .page-header {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 50px;
+  }
+
+  .page-header__delivery {
+    display: block;
+    order: 3;
+    flex-grow: 1;
+
+    text-align: right;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-header {
+    display: flex;
+  }
+
+  .page-header__delivery {
+    order: 4;
+  }
+}
