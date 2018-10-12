@@ -23,7 +23,7 @@
   display: none;
 }
 
-@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+@media (min-width: $tablet-width) {
   .nav-list {
     box-sizing: border-box;
 
@@ -31,15 +31,37 @@
     flex-wrap: wrap;
     align-items: center;
     padding: 0;
+  }
 
-    &:first-of-type {
-      order: 2;
-      width: 65.1198%;
+  .site-nav {
+    width: 65.1198%;
+    order: 2;
+
+    .nav-list__item {
+      flex-grow: 1;
+
+      text-align: left;
+      font-size: 15px;
+      line-height: 24px;
     }
 
-    &:last-of-type {
-      order: 1;
-      width: 52.0958%;
+    .nav-list__link {
+      padding: 20px 0;
+    }
+  }
+
+  .user-nav {
+    width: 52.0958%;
+    order: 1;
+
+    .nav-list__link {
+      min-width: 80px;
+      min-height: 80px;
+    }
+
+    .nav-list__item:last-of-type {
+      flex-grow: 1;
+      line-height: 80px;
     }
   }
 
@@ -49,8 +71,6 @@
     position: relative;
 
     display: block;
-    min-width: 80px;
-    min-height: 80px;
     padding: 0;
 
     &--search {
@@ -80,19 +100,6 @@
     display: none;
   }
 
-  .user-nav {
-    order: 1;
-
-    .nav-list__item:last-of-type {
-      flex-grow: 1;
-      line-height: 80px;
-    }
-  }
-
-  .site-nav {
-    order: 2;
-  }
-
   .sales {
     display: none;
   }
@@ -108,7 +115,21 @@
 
   .sales {
     display: flex;
+    width: 36%;
     order: 3;
+
+    .nav-list__item {
+      width: 50%;
+      flex-grow: 1;
+      text-align: left;
+    }
+
+    .nav-list__link {
+      padding: 20px 0;
+
+      font-size: 15px;
+      line-height: 24px;
+    }
   }
 
   .site-nav {
@@ -119,35 +140,6 @@
   .user-nav {
     width: 33.53%;
     order: 2;
-  }
-
-  .nav-list__link {
-    box-sizing: border-box;
-
-    position: relative;
-
-    display: block;
-    min-width: 80px;
-    min-height: 80px;
-    padding: 0;
-
-    &--search {
-      &::before {
-        content: "";
-
-        position: absolute;
-
-        display: block;
-        width: 18px;
-        height: 19px;
-
-        @include to-center;
-
-        background-image: url("../img/icon-search.svg");
-        background-repeat: no-repeat;
-        background-position: center;
-      }
-    }
   }
 
   .nav-list__link-text {

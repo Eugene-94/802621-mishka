@@ -38,27 +38,27 @@
     width: 50%;
     padding-right: 60px;
 
-    &:nth-child(1) {
+    &--eco {
       order: 0;
     }
 
-    &:nth-child(2) {
+    &--scandinavian {
       order: 2;
     }
 
-    &:nth-child(3) {
+    &--likes {
       order: 4;
     }
 
-    &:nth-child(4) {
+    &--with-love {
       order: 1;
     }
 
-    &:nth-child(5) {
+    &--manufacturer {
       order: 3;
     }
 
-    &:nth-child(6) {
+    &--wrap {
       order: 5;
     }
   }
