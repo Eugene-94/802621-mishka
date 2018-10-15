@@ -48,8 +48,8 @@
     background-color: #f9f9f9;
 
     &--index {
-      padding: 125px 50px;
-      padding-bottom: 420px;
+      padding: 125px 0;
+      padding-bottom: 380px;
 
       background-image: url("../img/hero-tablet@1x.jpg");
       background-repeat: no-repeat;
@@ -59,5 +59,13 @@
     &--inner {
       margin-bottom: 120px;
     }
+  }
+
+  .page-title__wrapper {
+    box-sizing: border-box;
+
+    @include wrapper-common;
+
+    padding: 0 175px;
   }
 }

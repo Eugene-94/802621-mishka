@@ -29,6 +29,7 @@
   .feedback {
     padding: 0;
   }
+
   .feedback__wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -82,6 +83,7 @@
     padding: 0;
     padding-left: 175px;
   }
+
   .feedback__title {
     @include title-desktop-common;
   }

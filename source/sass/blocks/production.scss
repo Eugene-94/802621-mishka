@@ -100,7 +100,7 @@
     min-height: 455px;
 
     @include wrapper-common;
-}
+  }
 
   .production__video {
     position: absolute;
@@ -124,7 +124,6 @@
     box-sizing: border-box;
 
     width: 33.33%;
-    margin-bottom: 50px;
     margin-bottom: 85px;
   }
 

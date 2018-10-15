@@ -17,6 +17,7 @@
 @media (min-width: $desktop-width) {
   .intro {
     box-sizing: border-box;
+
     @include wrapper-common;
 
     padding: 0 175px;
