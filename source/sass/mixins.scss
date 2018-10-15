@@ -33,10 +33,26 @@
   color: #000000;
 }
 
+@mixin title-tablet-common {
+  font-size: 43px;
+  line-height: 50px;
+}
+
+@mixin title-desktop-common {
+  font-size: 53px;
+  line-height: 57px;
+}
+
 @mixin list-common {
   padding: 0;
+  margin: 0;
 
   list-style: none;
+}
+
+@mixin wrapper-common {
+  margin: 0 auto;
+  width: 1050px;
 }
 
 @mixin colorful-label {

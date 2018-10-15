@@ -28,3 +28,86 @@
 .contacts__map {
   text-align: center;
 }
+
+@media (min-width: $tablet-width) {
+  .contacts__title {
+    padding: 0 50px;
+
+    @include title-tablet-common;
+  }
+
+  .contacts__info {
+    width: 87%;
+  }
+
+  .contacts__info tbody {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .contacts__row {
+    display: flex;
+    width: 50%;
+  }
+
+  .contacts__data {
+    width: auto;
+
+    &:nth-of-type(2n+1) {
+      padding-right: 20px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .contacts {
+    box-sizing: border-box;
+  }
+
+  .contacts__wrapper {
+    box-sizing: border-box;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 457px;
+    padding-left: 175px;
+
+    @include wrapper-common;
+  }
+
+  .contacts__title {
+    padding: 0;
+    width: 50%;
+  }
+
+  .contacts__info {
+    box-sizing: border-box;
+    width: 350px;
+    margin: 0;
+    margin-bottom: 50px;
+  }
+
+  .contacts__info tbody {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contacts__row {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .contacts__map {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .contacts__write-us {
+    width: 230px;
+    margin: 0;
+  }
+}

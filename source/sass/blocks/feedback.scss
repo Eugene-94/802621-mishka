@@ -24,3 +24,67 @@
 
   text-align: center;
 }
+
+@media (min-width: $tablet-width) {
+  .feedback {
+    padding: 0;
+  }
+
+  .feedback__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    padding: 0 50px;
+    padding-right: 50px;
+
+    background-image: url("../img/review@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: left center;
+  }
+
+  .feedback__slide {
+    width: 100%;
+    order: 2;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .feedback__message {
+    width: 100%;
+  }
+
+  .author-wrapper {
+    flex-grow: 1;
+  }
+
+  .feedback__selector {
+    width: 83.5px;
+  }
+
+  .feedback__title {
+    order: 0;
+    flex-grow: 1;
+
+    @include title-tablet-common;
+  }
+
+  .feedback__write-review {
+    width: 170px;
+    order: 1;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .feedback__wrapper {
+    box-sizing: border-box;
+
+    @include wrapper-common;
+
+    padding: 0;
+    padding-left: 175px;
+  }
+
+  .feedback__title {
+    @include title-desktop-common;
+  }
+}

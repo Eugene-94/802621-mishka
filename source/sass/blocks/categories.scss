@@ -1,4 +1,4 @@
-.categories {
+.categories__list {
   @include list-common;
 }
 
@@ -25,5 +25,25 @@
 
   &--toys {
     background-color: #56c3b2;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .categories {
+    background-color: #f9f9f9;
+  }
+
+  .categories__list {
+    display: flex;
+  }
+
+  .categories__item {
+    width: 50%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .categories__wrapper {
+    @include wrapper-common;
   }
 }
