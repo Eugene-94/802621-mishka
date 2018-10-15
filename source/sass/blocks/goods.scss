@@ -9,8 +9,10 @@
 }
 
 @media (min-width: $desktop-width) {
-  .goods {
+  .goods__wrapper {
     display: flex;
     justify-content: space-between;
+
+    @include wrapper-common;
   }
 }

@@ -50,6 +50,11 @@
   list-style: none;
 }
 
+@mixin wrapper-common {
+  margin: 0 auto;
+  width: 1050px;
+}
+
 @mixin colorful-label {
   color: $form-title-color;
   text-transform: uppercase;

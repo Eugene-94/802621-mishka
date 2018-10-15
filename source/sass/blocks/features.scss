@@ -66,7 +66,16 @@
 
 @media (min-width: $desktop-width) {
   .features {
-    padding-left: 225px;
+    padding: 0;
+  }
+
+  .features__wrapper {
+    box-sizing: border-box;
+    width: 1050px;
+
+    @include wrapper-common;
+
+    padding-left: 175px;
   }
 
   .features__title {

@@ -56,12 +56,48 @@
 @media (min-width: $tablet-width) {
   .goods-card {
     display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .goods-card__link {
+    width: 50%;
+  }
+
+  .goods-card__body {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .goods-card__buy-item {
+    align-self: flex-end;
   }
 }
 
 @media (min-width: $desktop-width) {
   .goods-card {
+    width: 316px;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .goods-card__link {
+    width: 100%;
+  }
+
+  .goods-card__body {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .goods-card__info {
+    width: 100%;
+  }
+
+  .goods-card__buy-item {
+    width: 100%;
+    align-self: flex-end;
   }
 }

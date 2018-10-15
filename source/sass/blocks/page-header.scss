@@ -1,8 +1,11 @@
 .page-header {
+  padding-top: 20px;
+}
+
+.page-header__wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 20px;
 }
 
 .page-header__btn {
@@ -30,12 +33,15 @@
 
 @media (min-width: $tablet-width) {
   .page-header {
+    padding: 0 50px;
+    padding-top: 10px;
+  }
+
+  .page-header__wrapper {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    padding: 0 50px;
-    padding-top: 10px;
   }
 
   .page-header__delivery {
@@ -53,8 +59,10 @@
 }
 
 @media (min-width: $desktop-width) {
-  .page-header {
+  .page-header__wrapper {
     display: flex;
+
+    @include wrapper-common;
   }
 
   .page-header__delivery {

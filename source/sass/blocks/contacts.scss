@@ -61,15 +61,21 @@
 
 @media (min-width: $desktop-width) {
   .contacts {
-    outline: 1px solid black;
+    box-sizing: border-box;
+  }
+
+  .contacts__wrapper {
+    box-sizing: border-box;
+
     position: relative;
 
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    min-height: 457px;
+    padding-left: 175px;
 
-    padding-left: 225px;
-    padding-right: 50px;
+    @include wrapper-common;
   }
 
   .contacts__title {
@@ -78,9 +84,9 @@
   }
 
   .contacts__info {
-    width: 50%;
+    box-sizing: border-box;
+    width: 350px;
     margin: 0;
-    padding-left: 50px;
     margin-bottom: 50px;
   }
 
@@ -90,13 +96,14 @@
   }
 
   .contacts__row {
+    width: 100%;
     margin-bottom: 30px;
   }
 
   .contacts__map {
     position: absolute;
     top: 0;
-    right: 50px;
+    right: 0;
   }
 
   .contacts__write-us {

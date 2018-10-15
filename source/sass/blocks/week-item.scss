@@ -56,7 +56,6 @@
     /*display: flex;
     flex-wrap: wrap;*/
     padding: 0 50px;
-    outline: 1px solid black;
   }
 
   .week-item__title-wrapper {
@@ -72,7 +71,7 @@
 
   .week-item__info-wrapper {
     display: inline-block;
-    width: 49%;
+    width: 50%;
     margin-bottom: 10px;
   }
 
@@ -91,19 +90,20 @@
 }
 
 @media (min-width: $desktop-width) {
-  .week-item {
+  .week-item__wrapper {
     position: relative;
+
+    @include wrapper-common;
 
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-items: flex-start;
+    min-height: 636px;
   }
 
   .week-item__title {
     @include title-desktop-common;
-    word-wrap: normal;
-    overflow: visible;
   }
 
   .week-item__subtitle {
@@ -126,26 +126,32 @@
   }
 
   .week-item__info-wrapper {
+    box-sizing: border-box;
+
     order: 2;
-    margin-left: 175px;
-    width: 33.33%;
+    padding-left: 175px;
+    padding-right: 60px;
+    width: 50%;
   }
 
   .week-item__buy-wrapper {
+    box-sizing: border-box;
+
     order: 3;
-    margin-left: 175px;
-    width: 33.33%;
+    padding-left: 175px;
+    padding-right: 60px;
+    width: 50%;
   }
 
   .week-item__description {
-    margin-bottom: 65px;
+    margin-bottom: 55px;
   }
 
   .week-item__properties {
-    margin-bottom: 80px;
+    margin-bottom: 75px;
   }
 
   .week-item__price {
-    margin-bottom: 60px;
+    margin-bottom: 50px;
   }
 }

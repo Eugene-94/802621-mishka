@@ -34,12 +34,18 @@
       background-repeat: no-repeat;
       background-position: center 10%;
     }
+
+    &--inner {
+      margin-bottom: 80px;
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
   .page-title {
     @include title-desktop-common;
+
+    background-color: #f9f9f9;
 
     &--index {
       padding: 125px 50px;
@@ -48,6 +54,10 @@
       background-image: url("../img/hero-tablet@1x.jpg");
       background-repeat: no-repeat;
       background-position: center 10%;
+    }
+
+    &--inner {
+      margin-bottom: 120px;
     }
   }
 }

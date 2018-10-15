@@ -71,7 +71,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding-left: 25%;
+    padding-left: 167px;
 
     &--radio {
       flex-direction: column;
@@ -81,6 +81,11 @@
       flex-direction: column;
       align-items: stretch;
     }
+  }
+
+  .order-form__username-group {
+    display: flex;
+    align-items: baseline;
   }
 
   .order-form__section-title {
@@ -97,12 +102,12 @@
 
     &--username {
       width: auto;
+      margin-right: 20px;
     }
   }
 
   .order-form__input {
     &--username {
-      width: 80%;
     }
   }
 
@@ -110,6 +115,8 @@
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
+    margin-top: 55px;
+    margin-bottom: 50px;
   }
 
   .order-form__btn {
@@ -118,15 +125,55 @@
 }
 
 @media (min-width: $desktop-width) {
+  .order-form {
+    padding: 0;
+  }
+
+  .order-form__wrapper {
+    @include wrapper-common;
+  }
+
+  .order-form__section-title {
+    top: 15px;
+    left: 65px;
+  }
+
+  .order-form__section {
+    &--username {
+      padding-right: 175px;
+    }
+
+    &--phone {
+      padding-right: 175px;
+    }
+
+    &--email {
+      padding-right: 175px;
+    }
+
+    &--message {
+      padding-right: 175px;
+    }
+  }
+
+  .order-form__inputs-wrapper {
+    padding-left: 175px;
+  }
+
   .order-form__input-label {
-    width: 33.33%;
+    display: flex;
+    flex-direction: row;
+
+    &--color {
+      width: 33.33%;
+    }
 
     &--username {
-      width: auto;
+      padding-right: 50px;
     }
   }
 
   .form-footer {
-    padding-left: 25%;
+    padding: 0 175px;
   }
 }
