@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header class="page-header">
+    <header class="page-header page-header--inner">
       <div class="page-header__wrapper">
         <a class="page-logo" href="index.html">
           <picture>
@@ -57,9 +57,9 @@
     </header>
 
     <main class="catalog-content">
-      <h1 class="page-title page-title--inner">Каталог товаров</h1>
+      <h1 class="page-title page-title--inner catalog-content__page-title">Каталог товаров</h1>
 
-      <section class="goods">
+      <section class="goods catalog-content__goods">
         <div class="goods__wrapper">
           <h2 class="visually-hidden">Список товаров</h2>
             <article class="goods-card">
@@ -72,7 +72,7 @@
               </a>
 
               <section class="goods-card__body">
-                <div class="goods-card-info">
+                <div class="goods-card__info">
                   <a class="goods-card__link" href="#">
                     <h3 class="goods-card__title">Зайчик-попрыгайчик</h3>
                   </a>
@@ -80,7 +80,7 @@
                 </div>
 
                 <div class="goods-card__buy-item">
-                  <p class="goods-card__price">1200 руб.</p>
+                  <p class="goods-card__price">1 200 руб.</p>
                   <a class="goods-card__to-cart" href="#">
                     <span class="visually-hidden">В корзину</span>
                   </a>
@@ -98,7 +98,9 @@
 
               <section class="goods-card__body">
                 <div class="card-info">
-                  <h3 class="goods-card__title">Корзинка для белья</h3>
+                  <a class="goods-card__link" href="#">
+                    <h3 class="goods-card__title">Корзинка для белья</h3>
+                  </a>
                   <p class="goods-card__description">Диаметр 15 см, высота 10 см</p>
                 </div>
 
@@ -121,12 +123,14 @@
 
               <section class="goods-card__body">
                 <div class="goods-card__info">
-                  <h3 class="goods-card__title">Большая корзинка для игрушек</h3>
+                  <a class="goods-card__link" href="#">
+                    <h3 class="goods-card__title">Большая корзинка для&nbsp;игрушек</h3>
+                  </a>
                   <p class="goods-card__description">Диаметр 30 см, высота 30 см</p>
                 </div>
 
                 <div class="goods-card__buy-item">
-                  <p class="goods-card__price">1500 руб.</p>
+                  <p class="goods-card__price">1 500 руб.</p>
                   <a class="goods-card__to-cart" href="#">
                     <span class="visually-hidden">В корзину</span>
                   </a>
@@ -138,14 +142,7 @@
 
       <section class="production catalog-content__production">
         <div class="production__wrapper">
-          <h2 class="production__title">
-            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
-              <g transform="translate(0 192)">
-              <path d="M26-177l6-4v16l-6-4V-177z M24-177v8c0,2.209-1.791,4-4,4H4c-2.209,0-4-1.791-4-4v-8c0-2.209,1.791-4,4-4h10 c0-1.105,0.895-2,2-2v-2H5c-0.553,0-1-0.447-1-1s0.447-1,1-1h12c0.553,0,1,0.447,1,1v3c1.105,0,2,0.895,2,2 C22.209-181,24-179.209,24-177z M12-177H4v8h8V-177z M20-176c0-0.553-0.447-1-1-1h-4c-0.553,0-1,0.447-1,1s0.447,1,1,1h4 C19.553-175,20-175.447,20-176z"/>
-              </g>
-            </svg>
-            Процесс производства
-          </h2>
+          <h2 class="production__title">Процесс производства</h2>
           <div class="production__video">
             <picture>
               <source media="(min-width: 1150px)" srcset="img/video-desktop@1x.jpg">
@@ -153,8 +150,8 @@
               <img src="img/video-mobile@1x.jpg" alt="Видео" class="production__video-preview">
             </picture>
           </div>
-          <p class="production__description">По просьбам наших любимых&nbsp;фолловеров мы сняли&nbsp;для&nbsp;вас подробное видео&nbsp;о&nbsp;том,
-            как&nbsp;появляются наши&nbsp;товары.</p>
+          <p class="production__description">По просьбам наших любимых фолловеров мы сняли&nbsp;для&nbsp;вас подробное видео о&nbsp;том,
+            как появляются наши&nbsp;товары.</p>
           <a href="#" class="production__link">Сделать заказ</a>
         </div>
       </section>
@@ -163,7 +160,9 @@
     <footer class="page-footer">
       <div class="page-footer__wrapper">
         <div class="footer-logo">
-          <img src="img/logo-footer.svg" alt="Мишка" width="102" height="34">
+          <a class="footer-logo__link" href="index.html">
+            <img src="img/logo-footer.svg" alt="Мишка" width="102" height="34">
+          </a>
         </div>
         <ul class="social">
           <li class="social__item">
@@ -199,20 +198,14 @@
         <legend class="modal__form-title">Выберите размер:</legend>
 
         <div class="modal__size-selectors">
-          <label class="modal__label" for="size-s">
-            <input class="modal__input" id="size-s" type="checkbox" name="size" value="s">
-            S
-          </label>
+          <input class="modal__input visually-hidden" id="size-s" type="checkbox" name="size" value="s" checked>
+          <label class="modal__label" for="size-s">S</label>
 
-          <label class="modal__label" for="size-m">
-            <input class="modal__input" id="size-m" type="checkbox" name="size" value="m">
-            M
-          </label>
+          <input class="modal__input visually-hidden" id="size-m" type="checkbox" name="size" value="m">
+          <label class="modal__label" for="size-m">M</label>
 
-          <label class="modal__label" for="size-l">
-            <input class="modal__input" id="size-l" type="checkbox" name="size" value="l">
-            L
-          </label>
+          <input class="modal__input visually-hidden" id="size-l" type="checkbox" name="size" value="l">
+          <label class="modal__label" for="size-l">L</label>
         </div>
 
         <button class="modal__btn" type="submit">Добавить</button>

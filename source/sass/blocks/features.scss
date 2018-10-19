@@ -1,9 +1,13 @@
 .features {
-  padding: 0 30px;
+  padding: 0 29px;
+  padding-top: 29px;
 }
 
 .features__title {
   @include title-common;
+
+  margin: 0;
+  margin-bottom: 30px;
 }
 
 .features__list {
@@ -11,11 +15,74 @@
 }
 
 .features__item {
-  padding-top: 60px;
+  position: relative;
+
+  padding-top: 55px;
+  margin-bottom: 28px;
 
   font-size: 17px;
   font-weight: 700;
   line-height: 20px;
+  letter-spacing: 0.01em;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 60px;
+    height: 40px;
+
+    background-repeat: no-repeat;
+  }
+
+  &--eco {
+    &::before {
+      background-image: url("../img/icon-feature-flower.svg");
+      background-position: 10px center;
+    }
+  }
+
+  &--scandinavian {
+    &::before {
+      background-image: url("../img/icon-feature-money.svg");
+      background-position: 0 2px;
+    }
+  }
+
+  &--likes {
+    &::before {
+      background-image: url("../img/icon-feature-heart.svg");
+      background-position: 8px center;
+    }
+  }
+
+  &--with-love {
+    &::before {
+      background-image: url("../img/icon-feature-ball.svg");
+      background-position: 5px center;
+    }
+  }
+
+  &--manufacturer {
+    &::before {
+      left: -4px;
+
+      background-image: url("../img/icon-feature-rocket.svg");
+      background-position: 0 5px;
+    }
+  }
+
+  &--wrap {
+    margin-bottom: 0;
+
+    &::before {
+      background-image: url("../img/icon-feature-gift.svg");
+      background-position: 5px center;
+    }
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -25,6 +92,10 @@
 
   .features__title {
     @include title-tablet-common;
+
+    margin-bottom: 49px;
+
+    letter-spacing: -0.015em;
   }
 
   .features__list {
@@ -37,6 +108,9 @@
 
     width: 50%;
     padding-right: 60px;
+    margin-bottom: 59px;
+
+    font-size: 20px;
 
     &--eco {
       order: 0;
@@ -71,6 +145,7 @@
 
   .features__wrapper {
     box-sizing: border-box;
+
     width: 1050px;
 
     @include wrapper-common;
@@ -80,5 +155,9 @@
 
   .features__title {
     @include title-desktop-common;
+  }
+
+  .features__item {
+    width: 40%;
   }
 }

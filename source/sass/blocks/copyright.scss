@@ -1,11 +1,40 @@
 .copyright {
   display: flex;
-  justify-content: center;
-  align-items: baseline;
+  justify-content: space-between;
+  margin-top: 47px;
+  padding: 0 38px;
+  min-height: 34px;
 }
 
 .copyright__developed {
   font-size: 19px;
-  line-height: 18px;
+  line-height: 34px;
   font-weight: 700;
+}
+
+.copyright__link {
+  height: 34px;
+}
+
+@media (min-width: $tablet-width) {
+  .copyright {
+    padding-right: 0;
+    margin: 0;
+  }
+
+  .copyright__developed {
+    margin-right: 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .copyright__link {
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
 }

@@ -1,12 +1,26 @@
 .modal {
+  box-sizing: border-box;
+
+  position: fixed;
+
+  display: none;
   width: 100%;
   border: 1px solid #c7c7c7;
   padding-bottom: 45px;
+  padding-top: 25px;
+
+  background-color: #ffffff;
+
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.25);
 }
 
 .modal__title {
-  text-align: center;
   padding: 0 90px;
+  margin: 0;
+  margin-bottom: 11px;
+
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .modal__form {
@@ -15,18 +29,60 @@
 }
 
 .modal__form-title {
+  margin-bottom: 30px;
+
   text-align: center;
+  letter-spacing: 0.07em;
 }
 
 .modal__size-selectors {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 32px;
+  padding: 0 60px;
+}
+
+.modal__label {
+  width: 32%;
+  min-height: 52px;
+
+  text-align: center;
+  line-height: 52px;
+  font-size: 17px;
+  font-weight: 700;
+
+  outline: 2px solid rgba(99, 209, 187, 0.3);
+}
+
+.modal__input:checked + .modal__label {
+  outline: 2px solid rgba(99, 209, 187, 1);
 }
 
 .modal__btn {
   @include link-btn;
+  border: none;
 
   color: #ffffff;
 
   background-color: #63d1bb;
+}
+
+@media (min-width: $tablet-width) {
+  .modal {
+    width: 568px;
+    padding-bottom: 46px;
+
+
+    @include to-center;
+  }
+
+  .modal__title {
+    padding: 0;
+    padding-top: 12px;
+    padding-left: 25px;
+
+    text-align: center;
+    font-size: 30px;
+    line-height: 57px;
+  }
 }

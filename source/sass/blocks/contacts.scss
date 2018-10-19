@@ -5,16 +5,39 @@
 
 .contacts__title {
   @include title-common;
-  padding: 0 30px;
+  padding: 0 28px;
+  margin: 0;
+  margin-bottom: 25px;
+
+  font-size: 18px;
+  line-height: 30px;
 }
 
 .contacts__info {
+  box-sizing: border-box;
+
   width: 81.25%;
   margin: 0 auto;
+  margin-bottom: 12px;
 }
 
 .contacts__data {
   width: 50%;
+  padding-bottom: 30px;
+
+  &--email {
+    text-align: right;
+    text-decoration: underline;
+  }
+
+  &--item {
+    vertical-align: top;
+  }
+}
+
+.contacts__map {
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 .contacts__write-us {
@@ -25,19 +48,42 @@
   width: 81.25%;
 }
 
-.contacts__map {
-  text-align: center;
-}
-
 @media (min-width: $tablet-width) {
+  .contacts {
+    position: relative;
+
+    padding-top: 63px;
+  }
+
   .contacts__title {
     padding: 0 50px;
+    margin-bottom: 47px;
 
     @include title-tablet-common;
+
+    letter-spacing: -0.015em;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 45px;
+      right: 55px;
+
+      width: 47px;
+      height: 81px;
+
+      background-image: url("../img/icon-flag.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
   }
 
   .contacts__info {
     width: 87%;
+    margin-bottom: 25px;
+
+    font-size: 17px;
   }
 
   .contacts__info tbody {
@@ -57,11 +103,21 @@
       padding-right: 20px;
     }
   }
+
+  .contacts__map {
+    margin-bottom: 48px;
+  }
+
+  .contacts__write-us {
+    width: 230px;
+  }
 }
 
 @media (min-width: $desktop-width) {
   .contacts {
     box-sizing: border-box;
+
+    padding-bottom: 90px;
   }
 
   .contacts__wrapper {
@@ -80,7 +136,16 @@
 
   .contacts__title {
     padding: 0;
+    padding-top: 71px;
     width: 50%;
+
+    font-size: 53px;
+    line-height: 57px;
+
+    &::after {
+      top: 62px;
+      left: 62px;
+    }
   }
 
   .contacts__info {
@@ -100,6 +165,14 @@
     margin-bottom: 30px;
   }
 
+  .contacts__data {
+    padding-bottom: 0;
+
+    &--address {
+      padding-right: 50px;
+    }
+  }
+
   .contacts__map {
     position: absolute;
     top: 0;
@@ -109,5 +182,25 @@
   .contacts__write-us {
     width: 230px;
     margin: 0;
+
+    &:hover {
+      color: #ffffff;
+
+      background-color: #444444;
+    }
+
+    &:active {
+      color: #6d6d6d;
+    }
+  }
+
+  .contacts__link {
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.15;
+    }
   }
 }

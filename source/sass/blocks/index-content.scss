@@ -4,7 +4,7 @@
 
 .index-content__categories {
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 33px;
 }
 
 .index-content__features {
@@ -13,12 +13,36 @@
 
 @media (min-width: $tablet-width) {
   .index-content__categories {
+    margin-bottom: 23px;
+  }
+
+  .index-content__week-item {
     margin-bottom: 50px;
+  }
+
+  .index-content__features {
+    margin-bottom: 26px;
+  }
+
+  .index-content__contacts {
+    margin-bottom: 15px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .index-content__categories {
-    margin-bottom: 70px;
+    margin-bottom: 35px;
+  }
+
+  .index-content__week-item {
+    margin-bottom: 60px;
+  }
+
+  .index-content__features {
+    margin-bottom: 38px;
+  }
+
+  .index-content__feedback {
+    margin-bottom: 10px;
   }
 }
