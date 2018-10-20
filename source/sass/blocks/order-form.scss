@@ -495,36 +495,16 @@
   .order-form__fieldset-wrapper {
     box-sizing: border-box;
 
-    @include wrapper-common;
-
-    &--username {
-      padding-right: 175px;
+    &--color {
+      background-color: #f1f1f1;
     }
 
     &--phone {
-      padding-right: 175px;
+      background-color: #f1f1f1;
     }
 
     &--email {
-      padding-right: 175px;
-    }
-
-    &--message {
-      padding-right: 175px;
-    }
-
-    &--phone {
-      &::before {
-        bottom: 46px;
-        right: 183px;
-      }
-    }
-
-    &--email {
-      &::before {
-        bottom: 63px;
-        right: 178.5px;
-      }
+      background-color: #f1f1f1;
     }
   }
 
@@ -538,6 +518,8 @@
 
   .order-form__section {
     padding: 0;
+
+    @include wrapper-common;
 
     &--radio {
       margin-bottom: 68px;
