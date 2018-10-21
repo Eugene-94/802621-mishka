@@ -2,6 +2,10 @@
   @include list-common;
 
   width: 100%;
+
+  &--sales {
+    display: none;
+  }
 }
 
 .nav-list__item {
@@ -12,22 +16,29 @@
 }
 
 .nav-list__link {
+  box-sizing: border-box;
+
   display: block;
   width: 100%;
   height: 100%;
   border-top: 1px solid #ececec;
   padding-top: 24px;
   padding-bottom: 24px;
-  padding-left: 23.4375%;
+  /*padding-left: 23.44%;*/
 
-  text-align: left;
+  text-align: center;
   font-size: 17px;
   font-weight: 700;
+
+  &--site-nav {
+    padding-right: 17px;
+  }
 
   &--cart {
     position: relative;
 
     border-bottom: 1px solid #ececec;
+    padding-left: 9px;
 
     &::before {
       content: "";
@@ -39,7 +50,7 @@
       height: 19px;
 
       top: 30px;
-      left: 33px;
+      right: 85%;
 
       background-image: url("../img/icon-cart.svg");
       background-repeat: no-repeat;
@@ -50,6 +61,8 @@
   &--search {
     position: relative;
 
+    padding-right: 33px;
+
     &::before {
       content: "";
 
@@ -60,7 +73,7 @@
       height: 19px;
 
       top: 30px;
-      left: 33px;
+      right: 85%;
 
       background-image: url("../img/icon-search.svg");
       background-repeat: no-repeat;
@@ -69,80 +82,15 @@
   }
 }
 
-.sales {
-  display: none;
-}
-
 @media (min-width: $tablet-width) {
   .nav-list {
     box-sizing: border-box;
 
     display: flex;
+    width: auto;
     flex-wrap: wrap;
     align-items: center;
     padding: 0;
-    width: auto;
-  }
-
-  .nav-list__item {
-    width: auto;
-  }
-
-  .site-nav {
-    box-sizing: border-box;
-
-    width: 62.1198%;
-    order: 2;
-    padding-left: 50px;
-
-    .nav-list__item {
-      margin-right: 35px;
-
-      text-align: left;
-    }
-
-    .nav-list__link {
-      padding: 17px 0;
-
-      font-size: 15px;
-      line-height: 24px;
-    }
-  }
-
-  .user-nav {
-    order: 1;
-    align-items: top;
-    padding-right: 50px;
-    margin: 0;
-    padding-left: 9px;
-    border-bottom: 1px solid #e7e7e7;
-
-    .nav-list__link {
-      box-sizing: border-box;
-
-      &--search {
-        min-width: 90px;
-        min-height: 90px;
-        border-left: 1px solid #e7e7e7;
-        border-right: 1px solid #e7e7e7;
-      }
-
-      &--cart {
-        &::before {
-          top: 17px;
-          left: -50px;
-        }
-      }
-    }
-
-    .nav-list__item:last-of-type {
-      align-self: flex-start;
-      padding-top: 17px;
-    }
-
-    .nav-list__item:first-of-type {
-      margin-right: 80px;
-    }
   }
 
   .nav-list__link {
@@ -179,11 +127,95 @@
     }
   }
 
+  .nav-list__item {
+    width: auto;
+  }
+
+  .nav-list--site-nav {
+    box-sizing: border-box;
+
+    width: 62.12%;
+    order: 2;
+    padding-left: 50px;
+
+    .nav-list__item {
+      margin-right: 35px;
+
+      text-align: left;
+    }
+
+    .nav-list__link {
+      padding: 17px 0;
+
+      font-size: 15px;
+      line-height: 24px;
+    }
+  }
+
+  /*
+  .site-nav {
+    box-sizing: border-box;
+
+    width: 62.12%;
+    order: 2;
+    padding-left: 50px;
+
+    .nav-list__item {
+      margin-right: 35px;
+
+      text-align: left;
+    }
+
+    .nav-list__link {
+      padding: 17px 0;
+
+      font-size: 15px;
+      line-height: 24px;
+    }
+  }
+  */
+
+  .nav-list--user-nav {
+    order: 1;
+    padding-right: 50px;
+    margin: 0;
+    margin-left: auto;
+    padding-left: 9px;
+    border-bottom: 1px solid #e7e7e7;
+
+    .nav-list__link {
+      box-sizing: border-box;
+
+      &--search {
+        min-width: 90px;
+        min-height: 90px;
+        border-left: 1px solid #e7e7e7;
+        border-right: 1px solid #e7e7e7;
+      }
+
+      &--cart {
+        &::before {
+          top: 17px;
+          left: -50px;
+        }
+      }
+    }
+
+    .nav-list__item:last-of-type {
+      align-self: flex-start;
+      padding-top: 17px;
+    }
+
+    .nav-list__item:first-of-type {
+      margin-right: 80px;
+    }
+  }
+
   .nav-list__link-text {
     display: none;
   }
 
-  .sales {
+  .nav-list--sales {
     display: none;
   }
 }
@@ -226,7 +258,7 @@
     }
   }
 
-  .site-nav {
+  .nav-list--site-nav {
     width: auto;
     order: 0;
     justify-content: space-between;
@@ -258,13 +290,10 @@
       padding: 0;
       font-size: 17px;
       align-self: center;
-
-      &:last-of-type {
-      }
     }
   }
 
-  .user-nav {
+  .nav-list--user-nav {
     width: auto;
     justify-content: flex-end;
     order: 2;
@@ -299,7 +328,7 @@
     }
   }
 
-  .sales {
+  .nav-list--sales {
     display: flex;
     justify-content: space-between;
     width: 36%;

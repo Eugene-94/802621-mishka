@@ -1,23 +1,9 @@
-.form-content__page-title {
-  margin-bottom: 23px;
-}
-
 .form-content__intro {
   margin-bottom: 23px;
 }
 
 @media (min-width: $tablet-width) {
-  .form-content__page-title {
-    margin-bottom: 71px;
-  }
-
   .form-content__intro {
     margin-bottom: 65px;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .form-content__page-title {
-    margin-bottom: 106px;
   }
 }

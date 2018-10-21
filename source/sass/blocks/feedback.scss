@@ -45,7 +45,7 @@
   letter-spacing: 0.07em;
 }
 
-.author-wrapper {
+.feedback__author-wrapper {
   margin-bottom: 30px;
 }
 
@@ -135,9 +135,12 @@
 
   .feedback__message {
     width: 100%;
+    margin-bottom: 55px;
+
+    font-size: 17px;
   }
 
-  .author-wrapper {
+  .feedback__author-wrapper {
     flex-grow: 1;
   }
 
@@ -151,12 +154,6 @@
     margin-bottom: 32px;
 
     @include title-tablet-common;
-  }
-
-  .feedback__message {
-    margin-bottom: 55px;
-
-    font-size: 17px;
   }
 
   .feedback__write-review {

@@ -24,8 +24,11 @@
   }
 }
 
-.order-form__fieldset-wrapper {
+.order-form__inputs-wrapper {
   position: relative;
+
+  display: flex;
+  flex-direction: column;
 
   &::before {
     content: "";
@@ -174,11 +177,6 @@
   }
 }
 
-.order-form__inputs-wrapper {
-  display: flex;
-  flex-direction: column;
-}
-
 .order-form__input {
   box-sizing: border-box;
 
@@ -265,39 +263,18 @@
   .order-form__fieldset-wrapper {
     position: relative;
 
-    &::before {
-      content: "";
+    padding: 0 50px;
 
-      position: absolute;
-
-      background-repeat: no-repeat;
-      background-position: center;
+    &--color {
+      background-color: #f1f1f1;
     }
 
     &--phone {
-      &::before {
-        bottom: 46px;
-        right: 26px;
-        z-index: 15;
-
-        width: 25px;
-        height: 24px;
-
-        background-image: url("../img/icon-phone.svg");
-      }
+      background-color: #f1f1f1;
     }
 
     &--email {
-      &::before {
-        bottom: 64px;
-        right: 21px;
-        z-index: 15;
-
-        width: 32px;
-        height: 21px;
-
-        background-image: url("../img/icon-mail.svg");
-      }
+      background-color: #f1f1f1;
     }
   }
 
@@ -305,7 +282,6 @@
     position: relative;
 
     display: flex;
-    padding: 0 50px;
 
     &--radio {
       margin-bottom: 68px;
@@ -315,31 +291,19 @@
       padding-top: 56px;
       padding-bottom: 21px;
       margin-bottom: 55px;
+    }
 
-      background-color: #f1f1f1;
+    &--username {
+      margin-bottom: 20px;
     }
 
     &--phone {
-      padding-top: 67px;
+      padding-top: 57px;
       margin-bottom: 0;
-
-      background-color: #f1f1f1;
-
-      &::before {
-        bottom: 47px;
-        right: 75px;
-      }
     }
 
     &--email {
       margin-bottom: 50px;
-
-      background-color: #f1f1f1;
-
-      &::before {
-        bottom: 64px;
-        right: 72px;
-      }
     }
 
     &--message {
@@ -382,6 +346,20 @@
       flex-direction: column;
       align-items: stretch;
     }
+
+    &--phone {
+      &::before {
+        top: 6px;
+        right: 24px;
+      }
+    }
+
+    &--email {
+      &::before {
+        top: 10px;
+        right: 20px;
+      }
+    }
   }
 
   .order-form__username-group {
@@ -391,14 +369,38 @@
 
   .order-form__section-title {
     position: absolute;
-    top: 10.5px;
+    top: 0;
     left: 0;
 
-    width: 25%;
     margin: 0;
+    width: auto;
 
     &::after {
       display: none;
+    }
+
+    &--radio {
+      top: 10px;
+    }
+
+    &--color {
+      top: 70px;
+    }
+
+    &--username {
+      top: 12px;
+    }
+
+    &--phone {
+      top: 69px;
+    }
+
+    &--email {
+      top: 11px;
+    }
+
+    &--message {
+      top: 18px;
     }
   }
 
@@ -455,7 +457,7 @@
   }
 
   .order-form__checkbox:checked + .order-form__input-label::after {
-    top: 0px;
+    top: 0;
     left: 6px;
 
     width: 40px;
@@ -495,6 +497,8 @@
   .order-form__fieldset-wrapper {
     box-sizing: border-box;
 
+    padding: 0;
+
     &--color {
       background-color: #f1f1f1;
     }
@@ -531,36 +535,39 @@
     }
 
     &--username {
-      padding-bottom: 10px;
+      padding-top: 57px;
+      padding-bottom: 20px;
     }
 
     &--phone {
-      padding-top: 57.5px;
-
-      &::before {
-        bottom: 47px;
-        right: 232px;
-      }
-    }
-
-    &--email {
-
-      &::before {
-        bottom: 64px;
-        right: 229px;
-      }
+      padding-top: 56px;
     }
 
     &--message {
+      padding-top: 48px;
       margin-bottom: 49px;
     }
   }
 
   .order-form__inputs-wrapper {
-    padding-left: 175px;
+    padding: 0 175px;
 
     &--color {
       padding-right: 90px;
+    }
+
+    &--phone {
+      &::before {
+        top: 6px;
+        right: 180px;
+      }
+    }
+
+    &--email {
+      &::before {
+        top: 10px;
+        right: 180px;
+      }
     }
   }
 
@@ -600,6 +607,7 @@
 
   .order-form__input {
     color: black;
+
     &:hover {
       border-color: #62d1ba;
     }
@@ -621,22 +629,6 @@
       color: rgba(68, 68, 68, 1);
       outline: none;
     }
-  }
-
-  .order-form__input:focus::-moz-placeholder {
-     color: #444444;
-  }
-
-  .order-form__input:focus::-webkit-input-placeholder {
-     color: #444444;
-   }
-
-  .order-form__input:focus:-ms-input-placeholder {
-     color: #444444;
-  }
-
-  .order-form__input:focus::-ms-input-placeholder {
-    color: #444444;
   }
 
   .order-form__input:focus::placeholder {
