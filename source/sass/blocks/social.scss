@@ -3,10 +3,12 @@
   justify-content: center;
 
   @include list-common;
+
+  padding-top: 4px;
 }
 
 .social__item:not(:last-child) {
-  margin-right: 30px;
+  margin-right: 37px;
 }
 
 .social__link {
@@ -19,8 +21,6 @@
   &::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
 
     width: 23px;
     height: 28px;
@@ -30,14 +30,50 @@
   }
 
   &.social__link--inst::before {
+    top: 0;
+    left: 0;
+
     background-image: url("../img/icon-insta.svg");
   }
 
   &.social__link--fb::before {
+    top: 0;
+    left: 0;
+
     background-image: url("../img/icon-fb.svg");
   }
 
   &.social__link--tw::before {
+    top: 0;
+    left: 0;
+
     background-image: url("../img/icon-twitter.svg");
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .social {
+    justify-content: space-around;
+    margin-left: 110px;
+  }
+
+  .social__item {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .social__link {
+    &:hover {
+      &::before {
+        opacity: 0.6;
+      }
+    }
+
+    &:active {
+      &::before {
+        opacity: 0.3;
+      }
+    }
   }
 }

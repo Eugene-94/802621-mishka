@@ -33,8 +33,17 @@
 
 @media (min-width: $tablet-width) {
   .page-header {
-    padding: 0 50px;
-    padding-top: 10px;
+    position: relative;
+
+    padding: 0;
+
+    &--index {
+      background-image: linear-gradient(to bottom, transparent 90px, #f9f9f9 90px);
+    }
+
+    &--inner {
+      background-image: linear-gradient(to bottom, transparent 90px, $title-bg 90px);
+    }
   }
 
   .page-header__wrapper {
@@ -49,6 +58,7 @@
     order: 3;
     flex-grow: 1;
     margin: 0;
+    padding-right: 50px;
 
     text-align: right;
   }
@@ -59,13 +69,18 @@
 }
 
 @media (min-width: $desktop-width) {
+  .page-header {
+    padding: 0;
+  }
+
   .page-header__wrapper {
     display: flex;
-
-    @include wrapper-common;
+    width: 1150px;
+    margin: auto;
   }
 
   .page-header__delivery {
     order: 4;
+    padding-right: 50px;
   }
 }

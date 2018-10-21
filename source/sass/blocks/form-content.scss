@@ -1,1 +1,9 @@
-/*form-content block*/
+.form-content__intro {
+  margin-bottom: 23px;
+}
+
+@media (min-width: $tablet-width) {
+  .form-content__intro {
+    margin-bottom: 65px;
+  }
+}
