@@ -3,7 +3,9 @@
 
   padding: 0 30px;
   padding-bottom: 40px;
+}
 
+.week-item__wrapper {
   &::after {
     content: "";
 
@@ -88,6 +90,9 @@
 @media (min-width: $tablet-width) {
   .week-item {
     padding: 0 49px;
+  }
+
+  .week-item__wrapper {
     padding-bottom: 68px;
 
     &::after {
@@ -181,7 +186,11 @@
     flex-wrap: wrap;
     align-items: flex-start;
     min-height: 636px;
-    padding-bottom: 24px;
+    padding-bottom: 92px;
+
+    &::after {
+      height: 23px;
+    }
   }
 
   .week-item__title {
