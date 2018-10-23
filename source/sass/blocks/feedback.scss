@@ -2,6 +2,10 @@
   box-sizing: border-box;
 
   position: relative;
+}
+
+.feedback__wrapper {
+  position: relative;
 
   padding: 0 30px;
   padding-bottom: 50px;
@@ -19,7 +23,7 @@
 
     background-image: url("../img/bg-zigzag-line.svg");
     background-repeat: repeat-x;
-    background-position: 10px bottom;
+    background-position: 25px bottom;
     background-size: contain;
   }
 }
@@ -105,10 +109,6 @@
 @media (min-width: $tablet-width) {
   .feedback {
     padding: 0;
-
-    &::after {
-      height: 17px;
-    }
   }
 
   .feedback__wrapper {
@@ -123,7 +123,17 @@
     background-image: url("../img/review@1x.jpg");
     background-repeat: no-repeat;
     background-position: left top;
-    background-size: auto;
+    background-size: 350px auto;
+
+    &::after {
+      height: 17px;
+    }
+
+    @media  (min-resolution: $retina-dpi),
+            (min-resolution: $retina-dppx)
+    {
+      background-image: url("../img/review@2x.jpg");
+    }
   }
 
   .feedback__slide {
@@ -170,12 +180,6 @@
 }
 
 @media (min-width: $desktop-width) {
-  .feedback {
-    &::after {
-      height: 23px;
-    }
-  }
-
   .feedback__wrapper {
     box-sizing: border-box;
 
@@ -185,6 +189,10 @@
     padding-left: 175px;
     padding-top: 70px;
     padding-bottom: 148px;
+
+    &::after {
+      height: 23px;
+    }
   }
 
   .feedback__title {
