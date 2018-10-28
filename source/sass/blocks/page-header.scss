@@ -9,20 +9,27 @@
 }
 
 .page-header__btn {
+  box-sizing: border-box;
+
+  padding: 0;
+
   position: absolute;
   top: 30px;
   right: 30px;
 
-  min-width: 21px;
-  min-height: 20px;
-
   @include btn-common;
 
   &--close {
+    width: 21px;
+    height: 20px;
+
     background-image: url("../img/icon-menu-close.svg");
   }
 
   &--open {
+    width: 20px;
+    height: 14.5px;
+
     background-image: url("../img/icon-menu-open.svg");
   }
 }
