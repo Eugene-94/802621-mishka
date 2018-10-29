@@ -32,6 +32,10 @@
 
     background-image: url("../img/icon-menu-open.svg");
   }
+
+  &--nojs {
+    display: none;
+  }
 }
 
 .page-header__delivery {
