@@ -166,14 +166,24 @@
   .goods-card__to-cart {
     &:hover {
       .goods-card__cart-icon {
-        fill: #63d1bb;
+
       }
     }
 
     &:active {
       .goods-card__cart-icon {
-        opacity: 0.3;
+
       }
+    }
+  }
+
+  .goods-card__cart-icon {
+    &:hover {
+      fill: #63d1bb;
+    }
+
+    &:active {
+      opacity: 0.3;
     }
   }
 }

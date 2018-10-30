@@ -11,6 +11,10 @@
   &--active {
     display: block;
   }
+
+  &--nojs {
+    display: block;
+  }
 }
 
 .nav-list__item {
