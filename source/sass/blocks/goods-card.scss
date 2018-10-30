@@ -163,20 +163,6 @@
     margin: 0;
   }
 
-  .goods-card__to-cart {
-    &:hover {
-      .goods-card__cart-icon {
-
-      }
-    }
-
-    &:active {
-      .goods-card__cart-icon {
-
-      }
-    }
-  }
-
   .goods-card__cart-icon {
     &:hover {
       fill: #63d1bb;
