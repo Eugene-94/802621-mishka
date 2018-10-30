@@ -486,6 +486,14 @@
     padding: 12px 0;
     height: 52px;
   }
+
+  .order-form__input::placeholder {
+    letter-spacing: 0.09em;
+  }
+
+  .order-form__textarea::placeholder {
+    letter-spacing: 0.15em;
+  }
 }
 
 @media (min-width: $desktop-width) {
