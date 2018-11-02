@@ -18,12 +18,13 @@
 
   position: relative;
 
-  display: block;
+  display: flex;
+  align-items: center;
   width: 23px;
   height: 28px;
 
   &--fb {
-    padding-left: 8px;
+    justify-content: flex-start;
   }
 }
 
@@ -34,16 +35,27 @@
 @media (min-width: $tablet-width) {
   .social {
     justify-content: space-around;
+    align-items: flex-start;
     margin-left: 110px;
+    padding: 0;
   }
 
   .social__item {
     margin-right: 0;
   }
+
+  .social__link {
+    &--fb {
+      width: 23px;
+      justify-content: flex-end;
+    }
+  }
 }
 
 @media (min-width: $desktop-width) {
   .social__link {
+    align-items: center;
+
     &:hover {
       .social__icon {
         fill: #46c1ae;
