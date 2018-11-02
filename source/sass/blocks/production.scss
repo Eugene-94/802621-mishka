@@ -40,7 +40,7 @@
 
 .production__description {
   padding-left: 32px;
-  padding-right: 26px;
+  padding-right: 34px;
   margin-bottom: 23px;
 
   font-size: 13px;
@@ -55,7 +55,7 @@
   text-align: center;
 }
 
-.nav-list__play-icon {
+.production__play-icon {
   fill: #63d1bb;
 }
 
@@ -150,19 +150,6 @@
     &::before {
       display: none;
     }
-
-    /*
-    &:hover {
-      &::before {
-        transform: scale(1.25) translate(-50%, -50%);
-      }
-    }
-
-    &:active {
-      &::before {
-        transform: scale(0.8) translate(-50%, -50%);
-      }
-    }*/
   }
 
   .production__play-btn {
@@ -172,11 +159,11 @@
 
     &:active {
       transform: scale(0.8) translate(-60%, -60%);
-
-      .nav-list__play-icon {
-        fill: #d0f1ea;
-      }
     }
+  }
+
+  .production__play-btn:active > .production__play-icon {
+    fill: #d0f1ea;
   }
 
   .production__title {

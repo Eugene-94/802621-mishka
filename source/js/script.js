@@ -4,6 +4,8 @@ var userNav = document.querySelector('.nav-list--user-nav');
 
 /* Реализация работы меню */
 menuButton.classList.remove('page-header__btn--nojs');
+menuButton.classList.remove('page-header__btn--close');
+menuButton.classList.add('page-header__btn--open');
 siteNav.classList.remove('nav-list--nojs');
 userNav.classList.remove('nav-list--nojs');
 

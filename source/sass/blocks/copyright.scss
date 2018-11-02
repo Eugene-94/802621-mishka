@@ -1,5 +1,6 @@
 .copyright {
   display: flex;
+  flex-direction: row-reverse;
   justify-content: space-between;
   margin-top: 47px;
   padding: 0 38px;
@@ -16,6 +17,10 @@
   height: 34px;
 }
 
+.copyright__icon {
+  fill: #63d1bb;
+}
+
 @media (min-width: $tablet-width) {
   .copyright {
     padding-right: 0;
@@ -28,13 +33,25 @@
 }
 
 @media (min-width: $desktop-width) {
+  .copyright {
+    align-items: flex-start;
+  }
+
   .copyright__link {
     &:hover {
-      opacity: 0.6;
+      .copyright__icon {
+        fill: #46c1ae;
+      }
     }
 
     &:active {
-      opacity: 0.3;
+      .copyright__icon {
+        fill-opacity: 0.3;
+      }
     }
+  }
+
+  .copyright__link:active + .copyright__developed {
+    opacity: 0.3;
   }
 }
